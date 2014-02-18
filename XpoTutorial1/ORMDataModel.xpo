@@ -11,6 +11,31 @@
             <field Id="c5ca093b-05ce-4a0f-9ae0-1c01e7f10468" name="Age" columnType="UInt16" virtualColumnType="UInt16" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
+        <aggrTarget>
+          <aggregation Id="428e1a99-03d3-4667-a5e4-390397904d85" sourceCollectionName="Orders" name="OrderReferencesCustomer" targetFieldName="Customer">
+            <xpObjectMoniker Id="70a7964e-0fba-4aa6-9e06-da3cab787268" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="a752c8ca-24b1-49bf-adb5-0381391515a0">
+            <collectionField Id="65a00a2d-4c4d-4269-a4dd-14f9636dcea5" name="Orders" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="ccfd75be-2a4b-43b4-bfa5-a183a09d65d8">
+      <xpObject Id="70a7964e-0fba-4aa6-9e06-da3cab787268" name="Order" baseClass="XPObject" userFileName="Order" designerFileName="Order.Designer" className="Order" virtualName="Order">
+        <fields>
+          <generalXpObjectHasFields Id="80eea79d-6fa2-4c84-ba52-10e52adef687">
+            <field Id="9498d9f7-514a-4269-99ff-99b926058355" name="ProductName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="499b2c4a-7a3f-404d-b072-dd9970f214aa">
+            <field Id="67a6bdda-affe-487c-acdd-7c4df0652153" name="OrderDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="67bc241e-88b0-4cda-b4cd-58e8fd1cd393">
+            <field Id="77301703-37b5-4721-a6d6-267d6e213074" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
   </classes>

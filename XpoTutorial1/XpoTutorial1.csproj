@@ -63,6 +63,10 @@
     <Compile Include="ORMDataModelCode\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMDataModelCode\Order.cs" />
+    <Compile Include="ORMDataModelCode\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XtraForm1.cs">

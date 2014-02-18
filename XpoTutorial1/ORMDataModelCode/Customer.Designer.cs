@@ -26,6 +26,8 @@ namespace XpoTutorial1.DataModel
             get { return fAge; }
             set { SetPropertyValue<ushort>("Age", ref fAge, value); }
         }
+        [Association(@"OrderReferencesCustomer", typeof(Order)), Aggregated]
+        public XPCollection<Order> Orders { get { return GetCollection<Order>("Orders"); } }
     }
 
 }

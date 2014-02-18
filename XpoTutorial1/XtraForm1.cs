@@ -22,13 +22,28 @@ namespace XpoTutorial1
             if (xpCollection1.Count == 0)
             {
                 var customer1 = new Customer(session1);
-                customer1.Name = "John";
-                customer1.Age = 21;
+                customer1.Name = "amine";
+                customer1.Age = 24;
+                customer1.Orders.Add(new Order(session1)
+                {
+                    ProductName = "Hp",
+                    OrderDate = new DateTime(2013, 3, 11)
+                });
+                customer1.Orders.Add(new Order(session1)
+                {
+                    ProductName = "Acer",
+                    OrderDate = new DateTime(2013, 1, 23)
+                });
                 customer1.Save();
                 xpCollection1.Add(customer1);
                 var customer2 = new Customer(session1);
-                customer2.Name = "Bob";
-                customer2.Age = 37;
+                customer2.Name = "sofyane";
+                customer2.Age = 22;
+                customer2.Orders.Add(new Order(session1)
+                {
+                    ProductName = "Sony",
+                    OrderDate = new DateTime(2013, 2, 9)
+                });
                 customer2.Save();
                 xpCollection1.Add(customer2);
             }

@@ -29,18 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colOrderDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
             this.session1 = new DevExpress.Xpo.Session(this.components);
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAge = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colOrderDate,
+            this.colProductName});
+            this.gridView2.GridControl = this.gridControl1;
+            this.gridView2.Name = "gridView2";
+            // 
+            // colOrderDate
+            // 
+            this.colOrderDate.FieldName = "OrderDate";
+            this.colOrderDate.Name = "colOrderDate";
+            this.colOrderDate.Visible = true;
+            this.colOrderDate.VisibleIndex = 0;
+            // 
+            // colProductName
+            // 
+            this.colProductName.FieldName = "ProductName";
+            this.colProductName.Name = "colProductName";
+            this.colProductName.Visible = true;
+            this.colProductName.VisibleIndex = 1;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.xpCollection1;
+            this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.White;
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
+            gridLevelNode1.LevelTemplate = this.gridView2;
+            gridLevelNode1.RelationName = "Orders";
+            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.gridControl1.Location = new System.Drawing.Point(12, 37);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(400, 285);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1,
+            this.gridView2});
             // 
             // xpCollection1
             // 
@@ -51,19 +96,6 @@
             // 
             this.session1.IsObjectModifiedOnNonPersistentPropertyChange = null;
             this.session1.TrackPropertiesModifications = false;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.xpCollection1;
-            this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.White;
-            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
-            this.gridControl1.Location = new System.Drawing.Point(12, 37);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(400, 285);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
             // 
             // gridView1
             // 
@@ -104,9 +136,10 @@
             this.Name = "XtraForm1";
             this.Text = "XtraForm1";
             this.Load += new System.EventHandler(this.XtraForm1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -121,5 +154,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colOid;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colAge;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductName;
     }
 }

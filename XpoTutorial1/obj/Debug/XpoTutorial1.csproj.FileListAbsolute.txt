@@ -7,4 +7,3 @@ C:\Users\Sofyane\documents\visual studio 2012\Projects\XpoTutorial1\XpoTutorial1
 C:\Users\Sofyane\documents\visual studio 2012\Projects\XpoTutorial1\XpoTutorial1\obj\Debug\XpoTutorial1.exe.licenses
 C:\Users\Sofyane\documents\visual studio 2012\Projects\XpoTutorial1\XpoTutorial1\obj\Debug\XpoTutorial1.exe
 C:\Users\Sofyane\documents\visual studio 2012\Projects\XpoTutorial1\XpoTutorial1\obj\Debug\XpoTutorial1.pdb
-C:\Users\Sofyane\documents\visual studio 2012\Projects\XpoTutorial1\XpoTutorial1\obj\Debug\XpoTutorial1.csprojResolveAssemblyReference.cache
